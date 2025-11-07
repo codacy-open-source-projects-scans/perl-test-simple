@@ -2,7 +2,7 @@ package Test2::Compare;
 use strict;
 use warnings;
 
-our $VERSION = '1.302205';
+our $VERSION = '1.302215';
 
 use Scalar::Util qw/blessed/;
 use Test2::Util qw/try/;
@@ -277,7 +277,7 @@ listed first:
 =item implicit_end => 1
 
 This option toggles array/hash boundaries. If this is true then no extra hash
-keys or array indexes will be allowed. This setting effects generated compare
+keys or array indexes will be allowed. This setting affects generated compare
 objects as well as any passed in.
 
 =item use_regex => 1
@@ -296,8 +296,8 @@ the value being checked.
 
 =item $check = strict_convert($thing)
 
-Convert C<$thing> to an L<Test2::Compare::*> object. This will behave strictly
-which means it uses these settings:
+Convert C<$thing> to an L<Test2::Compare::*|Test2::Compare::Base> object. This
+will behave strictly which means it uses these settings:
 
 =over 4
 
@@ -318,8 +318,8 @@ Regexes will be compared directly (IE are the regexes the same?)
 
 =item $compare = relaxed_convert($thing)
 
-Convert C<$thing> to an L<Test2::Compare::*> object. This will be relaxed which
-means it uses these settings:
+Convert C<$thing> to an L<Test2::Compare::*|Test2::Compare::Base> object. This
+will be relaxed which means it uses these settings:
 
 =over 4
 

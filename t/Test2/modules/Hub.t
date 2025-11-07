@@ -141,7 +141,7 @@ tests IPC => sub {
         }
     }
 
-    if (CAN_THREAD && $] ge '5.010') {
+    if (CAN_THREAD && "$]" >= 5.010) {
         require threads;
         my $thr = threads->new(sub { $do_send->() });
         $thr->join;
@@ -453,7 +453,7 @@ tests state => sub {
     ok(!$ok, "died");
 
     is($err, <<"    EOT", "Got expected error");
-Test already ended!
+Test already ended! (Did you call done_testing twice?)
 First End:  foo.t line 42
 Second End: foo.t line 42
     EOT

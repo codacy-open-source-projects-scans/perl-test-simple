@@ -1,10 +1,70 @@
-*******************************************************************************
-* Please note, over time several distributions have been merged into this one *
-* over time. Changes file history has also been merged, so entries for these  *
-* merged distributions can be found further down in the file.                 *
-*******************************************************************************
+********************************************************************************
+* Please note, over time several distributions have been merged into this one. *
+* "Changes" file history has also been merged, so entries for these merged     *
+* distributions can be found further down in the file.                         *
+********************************************************************************
 
 {{$NEXT}}
+
+1.302214  2025-05-24 15:02:44-07:00 America/Los_Angeles
+
+    - Minor doc fix
+
+1.302213  2025-05-18 10:42:43-07:00 America/Los_Angeles
+
+    - #1044 Fix duplicate words in Changes file (Thanks Daniel Böhmer)
+    - #1043 Fix spelling issue
+
+1.302212  2025-05-16 10:52:35-07:00 America/Los_Angeles
+
+    - Add a workaround for Test::Class::Moose
+
+1.302211  2025-05-02 00:47:29-07:00 America/Los_Angeles
+
+    - Chad Granum    - Fix #1035
+    - Chad Granum    - Fix #1033, todo docs
+    - Chad Granum    - Better error message if you use done_testing twice
+    - Dan            - Test2::Compare: link to base class for Test2::Compare::*
+    - Dan            - Test2::Manual::Anatomy::Event: small typo in link
+    - Dan            - Test2::EventFacet::Info::Table: fix link to Test2::API::Context
+    - Dan            - Test2::Manual::Anatomy::Context: fix link to test2_stack function
+    - James E Keenan - Spelling correction
+
+1.302210  2025-03-29 12:06:57-07:00 America/Los_Angeles
+
+    - Alexander Hartmaier   - fix typo in Test2::Util::Trace docs
+    - Karen Etheridge       - documentation fixes throughout for affect vs effect
+    - Yasuharu Iida feat    - Test2::Tools::Warnings warns called in void context
+    - bernhard Eliminate    - Remove unnecessary empty list assignments
+    - Graham Knop calculate - CAN_SIGSYS when called rather than as a constant
+
+1.302209  2025-01-22 08:17:20-08:00 America/Los_Angeles
+
+    - #1021 don't use base (Thanks Haarg)
+    - #1022 use PerlIO::get_layers without loading PerlIO.pm (Thanks Haarg)
+    - #1023 move try_sig_mask to separate file to avoid always loading POSIX (Thanks Haarg)
+
+1.302208  2025-01-21 10:19:33-08:00 America/Los_Angeles
+
+    - avoid closing over values in string eval when comparing values #1018 (Thanks Haarg)
+
+1.302207  2024-12-27 18:13:18-08:00 America/Los_Angeles
+
+    - Fix debugging info when JSON::MaybeXS is missing (Thanks James E Keenan)
+    - Fix typos (Thanks sobrado8086)
+    - Add TEST2_ENABLE_PLUGINS env var
+    - Add Test2::Env docs
+
+1.302206  2024-12-19 17:51:07-08:00 America/Los_Angeles
+
+    - Remove Test::Builder::IO::Scalar
+    - Fix #1016
+
+1.302205  2024-12-19 09:28:05-08:00 America/Los_Angeles
+
+    - Use our instead of 'use vars'
+    - Fix $[ usage
+    - Doc updates
 
 1.302204  2024-09-14 10:32:25-07:00 America/Los_Angeles
 
@@ -1016,7 +1076,7 @@ Test-Simple 1.302013_013 2016-03-08 09:19:39-08:00 America/Los_Angeles (TRIAL RE
 
 Test-Simple 1.302013_012 2016-01-28 20:38:16-08:00 America/Los_Angeles (TRIAL RELEASE)
 
-    - $Level effects all contexts once Test::Builder is loaded
+    - $Level affects all contexts once Test::Builder is loaded
     - Requires Test2 0.000023
 
 Test-Simple 1.302013_011 2016-01-14 21:55:28-08:00 America/Los_Angeles (TRIAL RELEASE)
@@ -1373,7 +1433,7 @@ Test-Simple 0.89_01 2009-Jun-23 15:13-08:00 EDT
     Test Fixes
     * Small fixes for integration with the Perl core
       [bleadperl eaa0815147e13cd4ab5b3d6ca8f26544a9f0c3b4]
-    * exit code tests could be effected by errno when PERLIO=stdio
+    * exit code tests could be affected by errno when PERLIO=stdio
       [bleadperl c76230386fc5e6fba9fdbeab473abbf4f4adcbe3]
 
 

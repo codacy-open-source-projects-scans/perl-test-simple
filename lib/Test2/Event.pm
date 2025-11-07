@@ -2,7 +2,7 @@ package Test2::Event;
 use strict;
 use warnings;
 
-our $VERSION = '1.302205';
+our $VERSION = '1.302215';
 
 use Scalar::Util qw/blessed reftype/;
 use Carp qw/croak/;
@@ -414,7 +414,7 @@ match.
 
 =item $e->add_amnesty({tag => $TAG, details => $DETAILS});
 
-This can be used to add amnesty to this event. Amnesty only effects failing
+This can be used to add amnesty to this event. Amnesty only affects failing
 assertions in most cases, but some formatters may display them for passing
 assertions, or even non-assertions as well.
 
@@ -566,10 +566,9 @@ is the description of the assertion.
 
 L<Test2::EventFacet::Control>
 
-This facet is used to tell the L<Test2::Event::Hub> about special actions the
-event causes. Things like halting all testing, terminating the current test,
-etc. In this facet the C<details> field explains why any special action was
-taken.
+This facet is used to tell the L<Test2::Hub> about special actions the event
+causes. Things like halting all testing, terminating the current test, etc. In
+this facet the C<details> field explains why any special action was taken.
 
 B<Note:> This is how bail-out is implemented.
 

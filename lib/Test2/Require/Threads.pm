@@ -2,9 +2,9 @@ package Test2::Require::Threads;
 use strict;
 use warnings;
 
-use base 'Test2::Require';
+BEGIN { require Test2::Require; our @ISA = qw(Test2::Require) }
 
-our $VERSION = '1.302205';
+our $VERSION = '1.302215';
 
 use Test2::Util qw/CAN_THREAD/;
 
