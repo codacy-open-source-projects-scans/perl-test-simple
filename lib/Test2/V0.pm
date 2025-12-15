@@ -4,7 +4,7 @@ use warnings;
 
 use Test2::Util::Importer;
 
-our $VERSION = '1.302217';
+our $VERSION = '1.302220';
 
 use Carp qw/croak/;
 
@@ -146,6 +146,10 @@ __END__
 =head1 NAME
 
 Test2::V0 - 0Th edition of the Test2 recommended bundle.
+
+=head1 V1 IS OUT NOW!
+
+See L<Test2::V1> for the most recent "Recommended" bundle.
 
 =head1 DESCRIPTION
 
